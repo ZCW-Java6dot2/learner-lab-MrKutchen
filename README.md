@@ -12,7 +12,8 @@
 * Create a `Person` class.
 	* The class should declare a `final` field named `id` of type `long`.
 	* The class should declare a field named `name` of type `String`.	
-	* `Person` constructor should have a parameter of type `long` and `String` which sets the `id` and `name` field to the respective values.
+	* `Person` constructor should have a parameter of type `long` and `String` which sets the `id` and `name` 
+	field to the respective values.
 	* The class should define a `getId()` method which returns the `Person` object's `id` field.
 	* The class should define a `getName()` method which returns the `Person` object's `name` field.
 	* The class should define a `setName()` method which sets the `Person` object's `name` field.
@@ -20,8 +21,10 @@
 -
 ### Part 1.0 - Test `Person`
 * Create a `TestPerson` class.
-	* Create a `testConstructor` method which ensures that a `Person` object's `id` and `name` field are being set upon construction.
-	* Create a `testSetName` method which ensures that a `Person` object's `name` variable is being set by invoking the `.setName` method.
+	* Create a `testConstructor` method which ensures that a `Person` object's `id` and `name` field 
+	are being set upon construction.
+	* Create a `testSetName` method which ensures that a `Person` object's `name` variable 
+	is being set by invoking the `.setName` method.
 
 -
 ### Part 2.0 - Create `Learner` Interface
@@ -40,8 +43,10 @@
 	* `Student` is a subclass of `Person`
 	* `Student` implements the `Learner` interface
 	* `Student` should have an instance variable `totalStudyTime` of type `double`
-	* `Student` should have a concrete implementation of the `learn` method which increments the `totalStudyTime` variable by the specified `numberOfHours` argument.
-	* `Student` should have a `getTotalStudyTime()` method which returns the `totalStudyTime` instance variable.
+	* `Student` should have a concrete implementation of the `learn` 
+	method which increments the `totalStudyTime` variable by the specified `numberOfHours` argument.
+	* `Student` should have a `getTotalStudyTime()` 
+	method which returns the `totalStudyTime` instance variable.
 
 
 -
@@ -49,7 +54,8 @@
 * Create a `TestStudent` class.
 	* Create a `testImplementation` method that asserts that a `Student` is an `instanceof` a `Learner`.
 	* Create a `testInheritance` method that asserts that a `Student` is an `instanceof` a `Person`.
-	* Create a `testLearn` method that ensures a `Student`'s `totalStudyTime` instance variable is incremented by the specified `numberOfHours` by invoking the `.learn` method.
+	* Create a `testLearn` method that ensures a `Student`'s `totalStudyTime` instance variable 
+	is incremented by the specified `numberOfHours` by invoking the `.learn` method.
 
 -
 ### Part 4.0 - Create `Teacher` Interface
@@ -74,8 +80,10 @@
 * Create an `Instructor` class such that:
 	* `Instructor` is a subclass of `Person`
 	* `Instructor` implements the `Teacher` interface
-	* `Instructor` should have a concrete implementation of the `teach` method which invokes the `learn` method on the specified `Learner` object.
-	* `Instructor` should have a concrete implementation of the `lecture` method which invokes the `learn` method on each of the elements in the specified array of `Learner` objects.
+	* `Instructor` should have a concrete implementation of the `teach` method 
+	which invokes the `learn` method on the specified `Learner` object.
+	* `Instructor` should have a concrete implementation of the `lecture` 
+	method which invokes the `learn` method on each of the elements in the specified array of `Learner` objects.
 		* `numberOfHours` should be evenly split amongst the learners.
 			* `double numberOfHoursPerLearner = numberOfHours / learners.length;`
 
@@ -84,8 +92,11 @@
 * Create a `TestInstructor` class.
 	* Create a `testImplementation` method that asserts that an `Instructor` is an `instanceof` a `Teacher`.
 	* Create a `testInheritance` method that asserts that a `Instructor` is an `instanceof` a `Person`.
-	* Create a `testTeach` method that ensures when an `Instructor` invokes the `teach` method, a respective student's `totalStudyTime` instance variable is incremented by the specified `numberOfHours`.
-	* Create a `testLecture` method that ensures when an `Instructor` invokes the `lecture` method, a respective array of students' `totalStudyTime` instance variables is incremented by `numberOfHours/students.length`.
+	* Create a `testTeach` method that ensures when an `Instructor` invokes the `teach` method, 
+	a respective student's `totalStudyTime` instance variable is incremented by the specified `numberOfHours`.
+	* Create a `testLecture` method that ensures when an `Instructor` invokes the `lecture` 
+	method, a respective array of students' `totalStudyTime` instance variables is incremented 
+	by `numberOfHours/students.length`.
 
 
 -
@@ -93,14 +104,20 @@
 * Create a `People` class.
 	* The class should instantiate a `List` field of `Person` objects named `personList`.
 	* The class should define a method named `add` which adds a `Person` to the `personList`.
-	* The class should define a method named `findById` which makes use of a `long id` parameter to return a `Person` object with the respective `id` field.
-	* The class should define a named `contains` which makes use of a `Person person` parameter to return `true` if the `personList` contains the respective `Person` object.
-	* The class should define a method named `remove` which makes use of a `Person person` parameter to remove a respective `Person` object.
-	* The class should define a method named `remove` which makes use of a `long id` parameter to remove a `Person` object with the respective `id` field.
+	* The class should define a method named `findById` which makes use of a `long id` 
+	parameter to return a `Person` object with the respective `id` field.
+	* The class should define a named `contains` which makes use of a `Person person` 
+	parameter to return `true` if the `personList` contains the respective `Person` object.
+	* The class should define a method named `remove` which makes use of a `Person person` 
+	parameter to remove a respective `Person` object.
+	* The class should define a method named `remove` which makes use of a `long id` 
+	parameter to remove a `Person` object with the respective `id` field.
 	* The class should define a named `removeAll` which clears our `personList` field.
 	* The class should define a method named `count` which returns the size of `personList`.
-	* The class should define a method named `toArray` which returns an array representation of the `personList` field.
-	* The class should implement `Iterable<E>` and define a method named `iterator` which makes use of the `personList` field to generate a new a `Iterator<E>`.
+	* The class should define a method named `toArray` which returns an array 
+	representation of the `personList` field.
+	* The class should implement `Iterable<E>` and define a method named `iterator` 
+	which makes use of the `personList` field to generate a new a `Iterator<E>`.
 	
 -
 ### Part 6.0 - Test `People`
