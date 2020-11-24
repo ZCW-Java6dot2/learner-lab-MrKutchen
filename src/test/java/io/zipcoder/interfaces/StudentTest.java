@@ -9,7 +9,7 @@ public class StudentTest extends TestCase {
     @Test
     public void testLearn() {
         //Given
-        Student student = new Student(1, "Peter");
+        Student student = new Student("Peter");
         Double expectedTotalStudyTime = 100.00;
         //When
         student.learn(expectedTotalStudyTime);
@@ -22,7 +22,7 @@ public class StudentTest extends TestCase {
     public void implementationTest() {
         //Given
         //When
-        Student student = new Student(1, null);
+        Student student = new Student(null);
         //Then
         Assert.assertTrue(student instanceof Learner);
     }
@@ -31,7 +31,7 @@ public class StudentTest extends TestCase {
     public void testInheritance() {
         //Given
         //When
-        Student student = new Student(1, null);
+        Student student = new Student(null);
         //Then
         Assert.assertTrue(student instanceof Person);
     }

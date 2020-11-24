@@ -11,18 +11,16 @@ public class TestPerson {
         long expectedId = 1;
         String expectedName = "Peter";
         //When
-        Person person = new Person(1, "Peter");
+        Person person = new Person("Peter");
         String actualName = person.getName();
-        long actualId = person.getId();
         //Then
-        Assert.assertEquals(expectedId, actualId);
         Assert.assertEquals(expectedName, actualName);
     }
 
     @Test
     public void testSetName() {
         //Given
-        Person person = new Person(1, "Peter");
+        Person person = new Person( "Peter");
         String expectedName = "Andrew";
         //When
         person.setName("Andrew");
